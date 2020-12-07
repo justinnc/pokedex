@@ -1,4 +1,3 @@
-/* eslint-disable comma-dangle */
 module.exports = {
   env: {
     browser: true,
@@ -13,13 +12,7 @@ module.exports = {
     "airbnb",
     "airbnb/hooks",
   ],
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-    ecmaVersion: 12,
-    sourceType: "module",
-  },
+  parser: "babel-eslint",
   plugins: ["react"],
   rules: {
     quotes: [2, "double", { avoidEscape: true }],
@@ -45,18 +38,8 @@ module.exports = {
     "react/no-redundant-should-component-update": 2,
     "react/no-unused-state": 1,
     "react/display-name": 0,
-
     "comma-dangle": ["off", {}],
-
-    "object-curly-newline": [
-      "error",
-      {
-        ImportDeclaration: {
-          minProperties: 3,
-          consistent: false,
-          multiline: true,
-        },
-      },
-    ],
+    "object-curly-newline": ["error", { multiline: true }],
+    "import/no-named-as-default": 0,
   },
 };

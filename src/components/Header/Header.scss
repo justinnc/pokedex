@@ -1,0 +1,11 @@
+@import "../../_config.sass";
+
+.header {
+  background-color: $main-red;
+  text-align: center;
+  padding: 5px 0px;
+
+  img {
+    width: 5em;
+  }
+}
